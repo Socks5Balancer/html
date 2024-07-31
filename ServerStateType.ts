@@ -26,6 +26,10 @@ export interface ServerStateType {
             port: string,
             disable: string,
         }[],
+        multiListen: {
+            host: string,
+            port: string,
+        }[],
         EmbedWebServerConfig: {
             enable: string,
             host: string,

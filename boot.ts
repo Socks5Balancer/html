@@ -77,6 +77,7 @@ class VueAppData {
     lastConnectComeTimeAgoString = "";
     lastConnectComeTimeAgoString2 = "";
     listenOn = "";
+    multiListen = "";
     haveUsableServer = true;
     UpstreamSelectRuleList: ServerStateType['RuleEnumList'] = [];
     lastUseUpstreamIndex: ServerStateType['pool']['getLastUseUpstreamIndex'] = "0";
@@ -270,6 +271,8 @@ class VueAppMethods {
                     return _.parseInt(n.index as string) === app.lastConnectServerIndex;
                 }) || {} as any;
                 app.listenOn = ' ' + T.config.listenHost + ' : ' + T.config.listenPort;
+                app.listenOn = ' ' + T.config.listenHost + ' : ' + T.config.listenPort;
+                app.multiListen = ' ' + T.config.multiListen.map(T => `${T.host}:${T.port}`).join(', ');
 
                 app.allConnectCount = _.reduce(T.pool.upstream, function (acc, T) {
                     return acc + _.parseInt(T.connectCount);

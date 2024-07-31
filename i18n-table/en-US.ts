@@ -131,6 +131,7 @@ export const enUS = (() => {
         isSleeping: {s: "isSleeping:"},
         sleeping: {s: "sleeping"},
         listenOn: {s: "listen On:"},
+        multiListen: {s: "Addition Multi Listen On:"},
         totalHistoryConnectCount: {s: "Total History Connect Count: "},
         ClientConnectInfo: {s: "Client Connect Info"},
         Host: {s: "Host"},
