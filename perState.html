@@ -84,7 +84,7 @@
     <table style="border: black 3px dashed;" class="split-table-header">
         <thead>
         <tr>
-            <th colspan="15" v-bind:colspan="dataTable.h.length+3"
+            <th colspan="16" v-bind:colspan="dataTable.h.length+4"
                 style="text-align: center;"
             >
                 <template v-if="$data.targetMode==='client'">
@@ -121,6 +121,9 @@
             </template>
             <th class="text-light-m">
                 index
+            </th>
+            <th class="text-light-m" rowspan="5" style="text-align: center;">
+                RemoteEndpoint
             </th>
         </tr>
         <tr>
@@ -188,13 +191,16 @@
                     <a href="javascript:void(0)"
                     >×</a>
                 </td>
+                <td>
+                    {{r.TargetEndpoint}}
+                </td>
             </tr>
         </template>
 
         </tbody>
         <tfoot>
         <tr>
-            <td colspan="15" v-bind:colspan="dataTable.h.length+3">
+            <td colspan="15" v-bind:colspan="dataTable.h.length+4">
 
             </td>
         </tr>
