@@ -70,6 +70,9 @@ jobs:
         with:
           node-version: ${{ matrix.node-version }}
 
+      - name: corepack enable
+        run: corepack enable
+
       - name: Build Web Html Js
         run: |
           yarn install
@@ -119,4 +122,4 @@ jobs:
           path: ${{ github.workspace }}
 
 
-        
+
